@@ -1,0 +1,32 @@
+//
+//  YQPrefixHeader.pch
+//  WeatherReport
+//
+//  Created by YoKing on 15/12/5.
+//  Copyright © 2015年 YQ. All rights reserved.
+//
+
+#ifndef YQPrefixHeader_pch
+#define YQPrefixHeader_pch
+
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "UIView+Extension.h"
+
+// 通知中心
+#define HWNotificationCenter [NSNotificationCenter defaultCenter]
+
+#ifdef DEBUG // 处于开发阶段
+#define YQLog(...) NSLog(__VA_ARGS__)
+#else // 处于发布阶段
+#define YQLog(...)
+#endif
+
+// RGB颜色
+#define YQColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+// 随机色
+#define YQRandomColor YQColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+#endif /* YQPrefixHeader_pch */
