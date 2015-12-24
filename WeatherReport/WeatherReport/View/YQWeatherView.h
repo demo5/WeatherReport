@@ -11,5 +11,6 @@
 @interface YQWeatherView : UIView
 
 
+@property(nonatomic,strong) UILabel *testLable;
 
 @end

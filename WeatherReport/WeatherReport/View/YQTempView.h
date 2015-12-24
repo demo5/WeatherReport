@@ -12,4 +12,5 @@
 
 
 
+@property(nonatomic,strong) UILabel *testLable;
 @end

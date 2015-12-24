@@ -46,6 +46,7 @@
 		29D2586F1C166FDE005406FC /* YQHumidityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D2586E1C166FDE005406FC /* YQHumidityView.m */; };
 		29D258721C16701C005406FC /* YQPartMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D258711C16701C005406FC /* YQPartMView.m */; };
 		29D258751C16702C005406FC /* YQWindView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D258741C16702C005406FC /* YQWindView.m */; };
+		29D2587C1C1ADA39005406FC /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D2587B1C1ADA39005406FC /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +130,9 @@
 		29D258711C16701C005406FC /* YQPartMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQPartMView.m; sourceTree = "<group>"; };
 		29D258731C16702C005406FC /* YQWindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQWindView.h; sourceTree = "<group>"; };
 		29D258741C16702C005406FC /* YQWindView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQWindView.m; sourceTree = "<group>"; };
+		29D258761C1678F2005406FC /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		29D2587A1C1ADA39005406FC /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		29D2587B1C1ADA39005406FC /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,7 @@
 		2964920D1C12F8D000F54CE6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				29D258761C1678F2005406FC /* Lato-Light.ttf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -211,6 +216,8 @@
 		296492291C12FC9900F54CE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				29D2587A1C1ADA39005406FC /* GDataXMLNode.h */,
+				29D2587B1C1ADA39005406FC /* GDataXMLNode.m */,
 				29723E171C1523A700AB15F1 /* SDWebImage */,
 				29723DFA1C1463C700AB15F1 /* AFNetworking */,
 			);
@@ -398,6 +405,7 @@
 				29723E441C1523A700AB15F1 /* UIImage+MultiFormat.m in Sources */,
 				29723E4E1C154F2300AB15F1 /* YQCityView.m in Sources */,
 				29723E451C1523A700AB15F1 /* UIImage+WebP.m in Sources */,
+				29D2587C1C1ADA39005406FC /* GDataXMLNode.m in Sources */,
 				29723E131C1463C700AB15F1 /* AFURLConnectionOperation.m in Sources */,
 				29723E401C1523A700AB15F1 /* SDWebImageManager.m in Sources */,
 				29723E0E1C1463C700AB15F1 /* AFHTTPRequestOperation.m in Sources */,
@@ -535,11 +543,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WeatherReport/YQPrefixHeader.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = WeatherReport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yoking.WeatherReport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos9.2;
 			};
 			name = Debug;
 		};
@@ -549,11 +560,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WeatherReport/YQPrefixHeader.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = WeatherReport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yoking.WeatherReport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos9.2;
 			};
 			name = Release;
 		};

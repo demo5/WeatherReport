@@ -11,4 +11,5 @@
 @interface YQHumidityView : UIView
 
 
+@property(nonatomic,strong) UILabel *testLable;
 @end

@@ -10,4 +10,17 @@
 
 @implementation YQWeatherInfo
 
+
++(instancetype)weatherWithDic:(NSDictionary *)dic{
+    
+    return [[self alloc] initWithDict:dic];
+}
+- (instancetype)initWithDict:(NSDictionary *)dict
+{
+    self = [super init];
+    if (self) {
+        [self setValuesForKeysWithDictionary:dict];
+    }
+    return self;
+}
 @end

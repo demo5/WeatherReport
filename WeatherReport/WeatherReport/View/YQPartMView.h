@@ -11,4 +11,5 @@
 @interface YQPartMView : UIView
 
 
+@property(nonatomic,strong) UILabel *testLable;
 @end

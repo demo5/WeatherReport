@@ -23,6 +23,10 @@
         lable.font = [UIFont systemFontOfSize:18.0];
         [self addSubview:lable];
         self.lable = lable;
+        
+        UILabel *testLable = [[UILabel alloc] init];
+        [self addSubview:testLable];
+        self.testLable = testLable;
     }
     return self;
 }
@@ -31,5 +35,6 @@
 -(void)layoutSubviews{
     self.lable.frame = CGRectMake(8, 8, 144, 30);
     
+    self.testLable.frame = CGRectMake(8, 80, 144, 30);
 }
 @end

@@ -10,5 +10,6 @@
 
 @interface YQWindView : UIView
 
+@property(nonatomic,strong) UILabel *testLable;
 
 @end

@@ -7,9 +7,7 @@
 //  城市模块
 
 #import <UIKit/UIKit.h>
-
 @interface YQCityView : UIView
 
-
-
+@property(nonatomic,strong) UILabel *testLable;
 @end

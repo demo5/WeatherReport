@@ -10,13 +10,24 @@
 
 @interface YQWeatherInfo : NSObject
 
+/** 城市*/
 @property (nonatomic,strong) NSString *city;
-@property (nonatomic,strong) NSString *cityid;
-@property (nonatomic,strong) NSString *img1;
-@property (nonatomic,strong) NSString *img2;
-@property (nonatomic,strong) NSString *ptime;
-@property (nonatomic,strong) NSString *temp1;
-@property (nonatomic,strong) NSString *temp2;
-@property (nonatomic,strong) NSString *weather;
+/** 天气信息1*/
+@property (nonatomic,strong) NSString *status1;
+/** 天气信息2*/
+@property (nonatomic,strong) NSString *status2;
+/** 更新时间*/
+@property (nonatomic,strong) NSString *udatetime;
+/** 最高温度*/
+@property (nonatomic,strong) NSString *temperature1;
+/** 最低温度*/
+@property (nonatomic,strong) NSString *temperature2;
+/** 风力*/
+@property (nonatomic,strong) NSString *power1;
+
+/**返回天气信息的类方法*/
++(instancetype)weatherWithDic:(NSDictionary *)dic;
+/**返回天气信息的对象方法*/
+- (instancetype)initWithDict:(NSDictionary *)dict;
 
 @end
